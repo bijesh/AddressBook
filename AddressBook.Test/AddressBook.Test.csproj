@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Address.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Address.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentAssertions" Version="5.10.0" />
+    <PackageReference Include="Moq" Version="4.13.1" />
+    <PackageReference Include="nunit" Version="3.12.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.15.1" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AddressBook\AddressBook.csproj" />
+  </ItemGroup>
+
+</Project>
